@@ -14,3 +14,15 @@ Also print
 Invalid Records = 3
 Total Sales = 1500.5
 ----------------------------------------------------------------------------------------------------------------------------
+orders = [100,200,None,"Invalid",300,400.5,"",500]
+print("Valid Orders")
+total=0
+total_valid_orders = 0
+for x in orders:
+    if type(x) is int or type(x) is float:
+        print(x)
+        total = total+x
+        total_valid_orders = total_valid_orders+1
+print(f"Total Sales = {total}")
+print(f"Invalid Records = {(len(orders))-(total_valid_orders)}")
+    
