@@ -1,0 +1,16 @@
+Project 6: Order Data Cleaner
+
+Given
+orders = [100,200,None,"Invalid",300,400.5,"",500]
+
+Print
+Valid Orders
+100
+200
+300
+400.5
+500
+Also print
+Invalid Records = 3
+Total Sales = 1500.5
+----------------------------------------------------------------------------------------------------------------------------
