@@ -1,1 +1,21 @@
-
+sales = [1200,4500,800,7600,2400]
+Display
+- Total Sales
+- Highest Sale
+- Lowest Sale
+- Average Sale
+- Number of Sales
+- Sorted Sales
+------------------------------------------------------------------------------------------------------------------------
+sales = [1200,4500,800,7600,2400]
+total_sales =0
+for x in sales:
+    total_sales = total_sales+x
+print(f"Total Sales = {total_sales}")
+print(f"Highest Sales = {(max(sales))}")
+print(f"Lowest Sales = {min(sales)}")
+if len(sales) > 0:
+    print(f"Average Sales = {total_sales/len(sales)}")
+print(f"Number of Sales ={len(sales)}")
+sales.sort()
+print(f"Sorted Sales = {sales}")
