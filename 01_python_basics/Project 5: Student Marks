@@ -1,1 +1,24 @@
+Project 5: Student Marks
+marks = [67,88,45,91,78]
+Print
+- Highest
+- Lowest
+- Average
+- Sorted marks
+- Reverse order
+------------------------------------------------------------------------------------------------------------------------------
+marks = [67,88,45,91,78]
+Highest_Marks = max(marks)
+Lowest_Marks = min(marks)
+print(f"Highest Marks are {Highest_Marks}")
+print(f"Lowest Marks are {Lowest_Marks}")
+total=0
+for x in marks:
+    total = total+x
+print(f"Average Marks are {(total)/len(marks)}")
+marks.sort()
+print(f"Sorted Marks {marks}")
+marks.reverse()
+print(f"Reverse Sorted Marks {marks}")
+
 
