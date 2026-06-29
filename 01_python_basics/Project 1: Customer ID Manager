@@ -1,1 +1,9 @@
-
+'''Project 1: Customer ID Manager
+Store customer IDs in a list.
+Menu:
+1. Add Customer
+2. Remove Last Customer
+3. Display Customers
+4. Find Customer
+5. Exit'''
+  
