@@ -1,0 +1,33 @@
+Employee Salary Report
+Scenario
+HR wants to prepare salary reports.
+salaries = [25000, 42000, 67000, 18000, 90000, 32000, 55000]
+
+Requirements
+Create
+Employees earning above 50,000
+Employees earning below 30,000
+Salary after 10% increment
+Salary after 5% tax deduction
+Monthly salary to yearly salary
+Salary category
+Salary	Category
+<30000	Low
+30000–60000	Medium
+>60000	High
+------------------------------------------------------------------------------------------------------------------------
+salaries = [25000, 42000, 67000, 18000, 90000, 32000, 55000]
+emp_sal_abv_50000 = [x for x in salaries if x > 50000]
+print(f"High Salaries are {emp_sal_abv_50000}")
+emp_sal_below_30000 = [x for x in salaries if x <30000]
+print(f"Low Salaries are {emp_sal_below_30000}")
+sal_after_10pct_incr = [(x+x*0.10) for x in salaries]
+print(f"Salaries after 10 percent increase {sal_after_10pct_incr}")
+sal_after_5pct_txdec = [(x-x*0.05) for x in salaries]
+print(f"Salaries after 5 percent deduction {sal_after_5pct_txdec}")
+yearly_salary = [x*12 for x in salaries]
+print(f"Yearly salaries are {yearly_salary}")
+salary_category = ["Low" if x <30000
+else "Medium" if x>=30000 and x <=60000
+else "High" for x in salaries]
+print(f"Salary Categories are {salary_category}")
