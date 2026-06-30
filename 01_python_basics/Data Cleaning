@@ -1,0 +1,53 @@
+Data Cleaning Project (Most Important)
+This is the closest to real data engineering work.
+Scenario
+A data file contains invalid values.
+data = [100,250,None,400,"NA",500,700.5,"",900,"Missing",150]
+Requirements
+Create
+Valid numeric values
+Invalid values
+Numbers greater than 300
+Numbers multiplied by 2
+Numbers rounded (where applicable)
+Data type of every element
+Count:
+Valid values
+Invalid values
+Integers
+Floats
+Strings
+
+Finally calculate
+
+Sum
+Average
+Maximum
+Minimum
+
+using only the valid numeric values.
+--------------------------------------------------------------------------------------------------------------------
+
+data = [100,250,None,400,"NA",500,700.5,"",900,"Missing",150]
+valid_numeric_values = [x for x in data if type(x) is int or type(x) is float]
+print(f"Valid numeric values are {valid_numeric_values}")
+invalid_values = [x for x in data if type(x) is not int and type(x) is not float]
+print(f"Invalid values are {invalid_values}")
+num_abv_300 = [y for y in valid_numeric_values if y >300]
+print(f"Numbers greater than 300 are {num_abv_300}")
+twice_num = [2*y for y in valid_numeric_values]
+print(f"Twice of the given number are {twice_num}")
+datatype_list = ["integer" if type(x) is int
+else "float" if type(x) is float
+else "string" if type(x) is str
+else "None" for x in data]
+print(datatype_list)
+print(f"Number of valid values are {len(valid_numeric_values)}")
+print(f"Number of invalid values are {len(invalid_values)}")
+print(f"Count of integer values are {datatype_list.count('integer')}")
+print(f"Count of float values are {datatype_list.count('float')}")
+print(f"Count of string values are {datatype_list.count('string')}")
+print(f"Sum of values is {sum(valid_numeric_values)}")
+print(f"Average of values is {(round(sum(valid_numeric_values)/len(valid_numeric_values),2))}")
+print(f"Largest Value of all valid values is {max(valid_numeric_values)}")
+print(f"Smallest Value of all valid values is {min(valid_numeric_values)}")
