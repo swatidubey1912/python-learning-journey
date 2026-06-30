@@ -1,0 +1,36 @@
+Product Price Analyzer
+Scenario
+An online store wants to update product prices.
+prices = [120, 550, 999, 1450, 250, 780, 2200, 430]
+
+Requirements
+Create
+Products above ₹1000
+Products below ₹500
+Prices after 15% discount
+Prices after adding 18% GST
+Discount amount for every product
+Final payable price (GST after discount)
+Price labels
+Price	Label
+<500	Budget
+500–1000	Standard
+>1000	Premium
+=========================================================================================================================
+prices = [120, 550, 999, 1450, 250, 780, 2200, 430]
+prod_abv_1000 = [x for x in prices if x >=1000]
+print(f"Product Prices Above 1000 are {prod_abv_1000}")
+prod_blw_500 = [x for x in prices if x<=500]
+print(f"Product Prices Below 500 are {prod_blw_500}")
+discounted_prices = [(x-x*0.15) for x in prices]
+print(f"Discounted Prices are {discounted_prices}")
+taxed_prices = [(x+x*0.18) for x in prices]
+print(f"Prices including GST are {taxed_prices}")
+discount_amount = [(0.15*x) for x in prices]
+print(f"Discount on each price {discount_amount}")
+final_payable_price = [(round((y+y*0.18),2)) for y in discounted_prices]
+print(f"Final payable prices are {final_payable_price}")
+price_labels = ["Budget" if x<500
+else "Standard" if 500<=x<=1000
+else "Premium" for x in prices]
+print(price_labels)
