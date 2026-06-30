@@ -1,4 +1,4 @@
-Student Result Management ⭐⭐
+Student Result Management
 Scenario
 A teacher wants to prepare a report card.
 marks = [78, 45, 92, 35, 60, 88, 49, 100, 55]
@@ -16,7 +16,6 @@ Marks	Grade
 Below 50	Fail
 
 Also calculate using normal code:
-
 Highest mark
 Lowest mark
 Average
