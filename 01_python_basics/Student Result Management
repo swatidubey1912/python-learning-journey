@@ -1,0 +1,55 @@
+Student Result Management ⭐⭐
+Scenario
+A teacher wants to prepare a report card.
+marks = [78, 45, 92, 35, 60, 88, 49, 100, 55]
+Requirements
+Create:
+- Pass list
+- Fail list
+- Distinction list (>75)
+- Grace marks (+5 only for failed students)
+- Grades
+Marks	Grade
+90+	A
+75–89	B
+50–74	C
+Below 50	Fail
+
+Also calculate using normal code:
+
+Highest mark
+Lowest mark
+Average
+-----------------------------------------------------------------------------------------------------------------------
+marks = [78, 45, 92, 35, 60, 88, 49, 100, 55]
+pass_list = [x for x in marks if x >=50]
+print(f"Pass List {pass_list}")
+fail_list = [x for x in marks if x < 50]
+print(f"Fail List {fail_list}")
+distiction_list = [x for x in marks if x > 75]
+print(f"Distiction List {distiction_list}")
+grade_A_list = [x for x in marks if x >=90]
+print(f"Grade A marks {grade_A_list}")
+grade_B_list = [x for x in marks if (x>=75 and x<=89)]
+print(f"Grade B marks {grade_B_list}")
+grade_C_list= [x for x in marks if (x >=50 and x<=74)]
+print(f"Grade C marks {grade_C_list}")
+grace_marks_list = [x+5 for x in marks if (x<50 and x+5>=50)]
+print(f"Grace marks list {grace_marks_list}")
+highest_marks = max(marks)
+print(f"Highest marks are {highest_marks}")
+lowest_marks = min(marks)
+print(f"Lowest marks are {lowest_marks}")
+average_marks = sum(marks)/len(marks)
+print(f"Average marks are {average_marks}")
+grades = ["A" if x >=90
+else "B" if x<=89 and x>=75
+else "C" if x<=74 and x>=50
+else "Fail" for x in marks]
+print(grades)
+remarks  = ["Excellent" if y == "A"
+else "Good" if y == "B"
+else "Average" if y=="C" 
+else "Needs Improvement" 
+for y in grades]
+print(remarks)
