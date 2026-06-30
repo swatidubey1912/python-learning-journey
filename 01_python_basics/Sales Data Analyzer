@@ -1,0 +1,39 @@
+Project 1: Sales Data Analyzer ⭐ (Must Do)
+Scenario
+A company wants to analyze its daily sales.
+sales = [1200, 4500, 800, 7600, 2400, 9800, 3200, 650, 5100]
+Requirements
+
+Create the following using list comprehensions wherever appropriate:
+- List of sales above 5000
+- List of sales below 1000
+- Sales after adding 18% GST
+- Sales after giving a 10% discount
+- Sales rounded to the nearest hundred
+- Square of every sale
+- Categorize each sale:
+     Low (<1000)
+     Medium (1000–5000)
+     High (>5000)
+---------------------------------------------------------------------------------------------------------------------
+sales = [1200, 4500, 800, 7600, 2400, 9800, 3200, 650, 5100]
+sales_above_500 = [x for x in sales if x > 500]
+print(f"sales above 500 are {sales_above_500}")
+sales_below_1000 = [x for x in sales if x < 1000]
+print(f"sales below 1000 are {sales_below_1000}")
+sales_after_18pct_gst = [(x+x*0.18) for x in sales]
+print(f"sales after 18 percent GST are {sales_after_18pct_gst}")
+sales_after_10pct_dscnt = [(x-x*0.10) for x in sales]
+print(f"sales after 10 percent discount are {sales_after_10pct_dscnt}")
+sqr_sales = [x**2 for x in sales]
+print(f"Squares of each of the sales are {sqr_sales}")
+sales_rounded_100 = [round(x,-2) for x in sales]
+print(f"sales rounded to nearest hundreds are {sales_rounded_100}")
+low_sales = [x for x in sales if x <1000]
+print(f"Low sales are {low_sales}")
+medium_sales = [x for x in sales if (x>=1000 and x <=5000)]
+print(f"medium sales are {medium_sales}")
+high_sales = [x for x in sales if x > 5000]
+print(f"high sales are {high_sales}")
+
+
